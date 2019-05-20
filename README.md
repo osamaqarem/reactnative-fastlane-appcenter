@@ -14,7 +14,7 @@ Install the appcenter plugin from the root of the project:
 
 ## `iOS`
 
-### Fastlane Signing
+### Signing
 
 For new projects, we need to create a bundle ID and provisioning profile.
 
@@ -47,7 +47,7 @@ In the future, pass `readonly: true` to the `match` action. This would ensure th
 
 https://docs.fastlane.tools/actions/match/#important-use-one-git-branch-per-team
 
-### Fastlane Building
+### Building
 
 If this is a new project: Open the project in Xcode. Correct the bundle ID. Select a development team. Exit.
 
@@ -64,7 +64,7 @@ Change the app name to yours.
 
 Generated `.ipa` will be at the project root `./appName.ipa`
 
-### Fastlane Uploading
+### Uploading
 
 Add the following to the iOS lane:
 
@@ -140,7 +140,7 @@ Edit `android/app/build.gradle` and add the signing config and build variant:
 
 Change the variable names according to the previous step. Done.
 
-### Fastlane Building
+### Building
 
 Add the following for Android:
 
@@ -156,7 +156,7 @@ The build type has to be consistent with the build variant in the previous step.
 
 Generated `.apk` will be at `android/app/build/outputs/apk/release/app-release.apk`
 
-### Fastlane Uploading
+### Uploading
 
 Add the following to the Android lane:
 

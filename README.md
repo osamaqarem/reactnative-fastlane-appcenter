@@ -1,4 +1,4 @@
-# rn-fastlane-appcenter
+# reactnative-fastlane-appcenter
 
 🚀 Simple fastlane setup for signing, building and uploading react-native apps to [appcenter](https://appcenter.ms).
 

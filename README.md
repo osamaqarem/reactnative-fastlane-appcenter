@@ -1,10 +1,18 @@
-# rn-simple-fastlane
+# rn-fastlane-appcenter
 
 🚀 Simple fastlane setup for signing, building and uploading react-native apps to [appcenter](https://appcenter.ms).
 
+Works ideally with new react-native projects.
+
+## Requirements
+
+Install fastlane
+
+- [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/)
+
 ## Getting Started
 
-At the root of the project: Setup fastlane:
+At the root of your react-native project: Setup fastlane:
 
 `mkdir fastlane && cd fastlane && touch Fastfile`
 

@@ -100,11 +100,6 @@ For environment variables, see [below.](#environment-variables)
 
 ### Signing
 
-Follow the Facebook guide for generating a signing key (Only until "Adding signing config to your app's gradle config
-" step).
-
-https://facebook.github.io/react-native/docs/signed-apk-android.html
-
 Navigate to JDK binary. Find the binary with:
 
 `usr/libexec/java_home`
@@ -211,3 +206,13 @@ Fastlane .env variables:
 
 https://docs.fastlane.tools/advanced/other/#environment-variables
 https://github.com/microsoft/fastlane-plugin-appcenter
+
+## More Reading
+
+Generating Signed Android APK
+
+https://facebook.github.io/react-native/docs/signed-apk-android.html
+
+Other fastlane Guides:
+
+https://docs.fastlane.tools/getting-started/cross-platform/react-native/

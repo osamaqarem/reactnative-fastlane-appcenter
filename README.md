@@ -2,13 +2,16 @@
 
 🚀 Simple fastlane setup for signing, building and uploading react-native apps to [appcenter](https://appcenter.ms).
 
-Works ideally with new react-native projects.
 
 ## Requirements
 
 Install fastlane:
 
 - [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/)
+
+Guide works ideally for new react-native projects:
+
+`react-native init awesome`
 
 ## Getting Started
 

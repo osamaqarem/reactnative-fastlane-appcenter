@@ -11,7 +11,7 @@ Install fastlane:
 
 Guide works ideally for new react-native projects:
 
-`react-native init awesome`
+- `react-native init awesome`
 
 ## Getting Started
 

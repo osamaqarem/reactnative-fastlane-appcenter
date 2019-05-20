@@ -199,7 +199,7 @@ Run `fastlane android beta`. You're now on Appcenter! 👏
 
 ## Environment Variables
 
-If you don't provide environment variables, you will be prompted to enter them when you run the commands. **You must specify the apk/ipa file paths with respect to the root project directory, though. Else the commands will fail with some variant of:**
+If you don't provide environment variables, you will be prompted to enter them when you run the commands. You must specify the apk/ipa file paths with respect to the root project directory **and not with respect to the fastfile location.** Else the commands will fail with some variant of:
 
 `[!] Couldn't find build file at path ''`
 

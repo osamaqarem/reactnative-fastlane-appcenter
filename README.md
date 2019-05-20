@@ -1,6 +1,6 @@
 # reactnative-fastlane-appcenter
 
-🚀 Simple fastlane setup for signing, building and uploading react-native apps to [appcenter](https://appcenter.ms).
+🚀 Simple fastlane setup for signing, building and uploading react-native apps to [App Center](https://appcenter.ms).
 
 
 ## Requirements
@@ -19,7 +19,7 @@ At the root of your react-native project: Setup fastlane:
 
 `cd YourAppName && mkdir fastlane && cd fastlane && touch Fastfile`
 
-Install the appcenter plugin from the root of the project:
+Install the App Center plugin from the root of the project:
 
 `cd .. && fastlane add_plugin appcenter`
 
@@ -79,7 +79,7 @@ Generated `.ipa` will be at the project root `./YourAppName.ipa`
 
 Add the following to the iOS lane:
 
-    desc 'Fetch certificates, build and upload to appcenter.'
+    desc 'Fetch certificates, build and upload to App Center.'
     lane :beta do
       build
       appcenter_upload(
@@ -92,7 +92,7 @@ Add the following to the iOS lane:
 
 Specify the .ipa path. Following this guide it would be `ipa: "./YourAppName.ipa"`
 
-Run `fastlane ios beta`. You're now on Appcenter! 👏
+Run `fastlane ios beta`. You're now on App Center! 👏
 
 For environment variables, see [below.](#environment-variables)
 
@@ -173,7 +173,7 @@ Generated `.apk` will be at `android/app/build/outputs/apk/release/app-release.a
 
 Add the following to the Android lane:
 
-    desc 'Build and upload to appcenter.'
+    desc 'Build and upload to App Center.'
     lane :beta do
     build
     appcenter_upload(
@@ -186,7 +186,7 @@ Add the following to the Android lane:
 
 Specify the .apk path. Following this guide it would be `apk: "./android/app/build/outputs/apk/release/app-release.apk"`
 
-Run `fastlane android beta`. You're now on Appcenter! 👏
+Run `fastlane android beta`. You're now on App Center! 👏
 
 ## `Optional` Add NPM Scripts
 
@@ -203,7 +203,7 @@ If you don't provide environment variables, you will be prompted to enter them w
 
 `[!] Couldn't find build file at path ''`
 
-Appcenter API Token:
+App Center API Token:
 
 https://appcenter.ms/settings/apitokens
 

@@ -11,13 +11,13 @@ Install fastlane:
 
 Guide works ideally for new react-native projects:
 
-- `react-native init awesome`
+- `react-native init YourAppName`
 
 ## Getting Started
 
 At the root of your react-native project: Setup fastlane:
 
-`mkdir fastlane && cd fastlane && touch Fastfile`
+`cd YourAppName && mkdir fastlane && cd fastlane && touch Fastfile`
 
 Install the appcenter plugin from the root of the project:
 
@@ -50,9 +50,9 @@ Now, add the following to the Fastfile:
       end
     end
 
-Change the bundle ID to yours.
+Change the bundle ID to the one you created earlier.
 
-In the future, pass `readonly: true` to the `match` action. This would ensure the command wouldn't create new provisioning profiles just in case.
+In the future, pass `readonly: true` to the `match` action. This would ensure the command wouldn't create new provisioning profiles.
 
 **Important**: Use the same git repo for all apps under the same apple developer. Use different branches within the repo for different apps.  
 
@@ -73,7 +73,7 @@ Add the following lane to iOS:
 
 Change the app name to yours.
 
-Generated `.ipa` will be at the project root `./appName.ipa`
+Generated `.ipa` will be at the project root `./YourAppName.ipa`
 
 ### Uploading
 
@@ -90,7 +90,7 @@ Add the following to the iOS lane:
       )
     end
 
-Specify the .ipa path.
+Specify the .ipa path. Following this guide it would be `ipa: "./YourAppName.ipa"`
 
 Run `fastlane ios beta`. You're now on Appcenter!
 
@@ -114,6 +114,8 @@ Generate keystore. Rename the key and alias.
 `sudo keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000`
 
 Move the key to your `android/app` directory.
+
+`sudo mv my-release-key.keystore [...path to YourAppName/android/app]`
 
 Create gradle variables by adding the following to `android/gradle.properties`:
 
@@ -181,6 +183,10 @@ Add the following to the Android lane:
         apk: ENV["APPCENTER_DISTRIBUTE_APK"]
         )
     end
+
+Specify the .apk path. Following this guide it would be `apk: "./android/app/build/outputs/apk/release/app-release.apk"`
+
+Run `fastlane android beta`. You're now on Appcenter!
 
 ## `Optional` Add NPM Scripts
 

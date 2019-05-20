@@ -6,7 +6,7 @@ Works ideally with new react-native projects.
 
 ## Requirements
 
-Install fastlane
+Install fastlane:
 
 - [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/)
 

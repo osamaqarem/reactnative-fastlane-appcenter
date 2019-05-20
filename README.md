@@ -92,7 +92,7 @@ Add the following to the iOS lane:
 
 Specify the .ipa path. Following this guide it would be `ipa: "./YourAppName.ipa"`
 
-Run `fastlane ios beta`. You're now on Appcenter!
+Run `fastlane ios beta`. You're now on Appcenter! 👏
 
 For environment variables, see [below.](#environment-variables)
 
@@ -186,7 +186,7 @@ Add the following to the Android lane:
 
 Specify the .apk path. Following this guide it would be `apk: "./android/app/build/outputs/apk/release/app-release.apk"`
 
-Run `fastlane android beta`. You're now on Appcenter!
+Run `fastlane android beta`. You're now on Appcenter! 👏
 
 ## `Optional` Add NPM Scripts
 

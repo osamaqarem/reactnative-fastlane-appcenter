@@ -9,11 +9,11 @@ Install fastlane:
 
 - [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/)
 
-Guide works ideally for new react-native projects:
-
-- `react-native init YourAppName`
-
 ## Getting Started
+
+Create a react-native project:
+
+`react-native init YourAppName`
 
 At the root of your react-native project: Setup fastlane:
 
@@ -50,7 +50,7 @@ Now, add the following to the Fastfile:
       end
     end
 
-Change the bundle ID to the one you created earlier.
+Change `com.app.bundle` to the bundle ID you created earlier.
 
 In the future, pass `readonly: true` to the `match` action. This would ensure the command wouldn't create new provisioning profiles.
 

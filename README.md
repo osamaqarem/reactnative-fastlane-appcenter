@@ -1,6 +1,6 @@
 # reactnative-fastlane-appcenter
 
-🚀 Simple fastlane setup for signing, building and uploading react-native apps to [Visual Studio App Center](https://appcenter.ms).
+🚀 Simple fastlane guide for signing, building and uploading new react-native apps to [Visual Studio App Center](https://appcenter.ms).
 
 
 ## Requirements

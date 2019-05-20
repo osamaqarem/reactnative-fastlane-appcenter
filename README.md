@@ -209,7 +209,7 @@ https://github.com/microsoft/fastlane-plugin-appcenter
 
 ## More Reading
 
-Generating Signed Android APK
+Generating Signed Android APK:
 
 https://facebook.github.io/react-native/docs/signed-apk-android.html
 

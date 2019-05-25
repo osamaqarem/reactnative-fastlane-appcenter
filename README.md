@@ -194,16 +194,16 @@ If you don't provide environment variables, you will be prompted to enter them w
 
 `[!] Couldn't find build file at path ''`
 
-App Center API Token:
-
-https://appcenter.ms/settings/apitokens
-
 Fastlane .env variables:
 
 https://docs.fastlane.tools/advanced/other/#environment-variables
 https://github.com/microsoft/fastlane-plugin-appcenter
 
-## More Reading
+## Useful Links
+
+App Center API Token:
+
+https://appcenter.ms/settings/apitokens
 
 Generating Signed Android APK:
 

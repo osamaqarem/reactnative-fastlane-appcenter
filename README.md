@@ -54,10 +54,6 @@ Change `com.app.bundle` to the bundle ID you created earlier.
 
 In the future, pass `readonly: true` to the `match` action. This would ensure the command wouldn't create new provisioning profiles.
 
-**Important**: Use the same git repo for all apps under the same apple developer. Use different branches within the repo for different apps.  
-
-https://docs.fastlane.tools/actions/match/#important-use-one-git-branch-per-team
-
 ### Building
 
 If this is a new project: Open the project in Xcode. Correct the bundle ID. Select a development team. Exit.

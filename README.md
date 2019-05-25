@@ -216,3 +216,8 @@ https://facebook.github.io/react-native/docs/signed-apk-android.html
 Other fastlane Guides:
 
 https://docs.fastlane.tools/getting-started/cross-platform/react-native/
+
+## Todo:
+
+- Add instructions for building on App Center from a repo.
+- A more automated way of signing for android.

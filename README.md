@@ -197,7 +197,6 @@ If you don't provide environment variables, you will be prompted to enter them w
 Fastlane .env variables:
 
 https://docs.fastlane.tools/advanced/other/#environment-variables
-https://github.com/microsoft/fastlane-plugin-appcenter
 
 ## Useful Links
 
@@ -209,11 +208,15 @@ Generating Signed Android APK:
 
 https://facebook.github.io/react-native/docs/signed-apk-android.html
 
+App Center fastlane Plugin
+
+https://github.com/microsoft/fastlane-plugin-appcenter
+
 Other fastlane Guides:
 
 https://docs.fastlane.tools/getting-started/cross-platform/react-native/
 
-## Todo:
+## Todo
 
 - Add instructions for building on App Center from a repo.
 - A more automated way of signing for android.

@@ -98,7 +98,7 @@ For environment variables, see [below.](#environment-variables)
 
 Navigate to JDK binary. Find the binary with:
 
-`usr/libexec/java_home`
+`/usr/libexec/java_home`
 
 Generate keystore. Rename the key and alias.
 

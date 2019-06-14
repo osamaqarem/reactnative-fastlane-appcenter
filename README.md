@@ -198,6 +198,10 @@ Fastlane .env variables:
 
 https://docs.fastlane.tools/advanced/other/#environment-variables
 
+## Issues
+
+If you face any problems following this guide, feel free to open an issue and I would love to try and help!
+
 ## Useful Links
 
 App Center API Token:

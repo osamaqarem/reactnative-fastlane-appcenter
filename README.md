@@ -219,8 +219,3 @@ https://github.com/microsoft/fastlane-plugin-appcenter
 Other fastlane Guides:
 
 https://docs.fastlane.tools/getting-started/cross-platform/react-native/
-
-## Todo
-
-- Add instructions for building on App Center from a repo .
-- A more automated way of signing for android.

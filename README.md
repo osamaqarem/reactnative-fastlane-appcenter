@@ -198,9 +198,9 @@ Fastlane .env variables:
 
 https://docs.fastlane.tools/advanced/other/#environment-variables
 
-## Issues
+## Issues/Suggestions
 
-If you face any problems following this guide, feel free to open an issue and I would love to try and help!
+If you have any suggestions or face any problems following this guide, please bring it up as an issue and I would love to try and help!
 
 ## Useful Links
 
@@ -222,5 +222,5 @@ https://docs.fastlane.tools/getting-started/cross-platform/react-native/
 
 ## Todo
 
-- Add instructions for building on App Center from a repo.
+- Add instructions for building on App Center from a repo .
 - A more automated way of signing for android.

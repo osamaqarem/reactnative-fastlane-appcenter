@@ -219,3 +219,7 @@ https://github.com/microsoft/fastlane-plugin-appcenter
 Other fastlane Guides:
 
 https://docs.fastlane.tools/getting-started/cross-platform/react-native/
+
+Generate your next React Native project with Fastlane already set up.
+
+https://github.com/osamaq/react-native-template

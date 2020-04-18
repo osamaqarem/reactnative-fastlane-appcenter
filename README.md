@@ -5,9 +5,18 @@
 
 ## Requirements
 
-Install fastlane:
+Install fastlane if you do not already have it:
 
-- [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/)
+```bash
+# Install the latest Xcode command line tools
+xcode-select --install
+
+# Install fastlane using RubyGems
+sudo gem install fastlane -NV
+
+# Alternatively using Homebrew
+brew install fastlane
+```
 
 ## Getting Started
 

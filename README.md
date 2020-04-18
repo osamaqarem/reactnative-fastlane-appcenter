@@ -58,16 +58,21 @@ In the future, pass `readonly: true` to the `match` action. This would ensure th
 
 If this is a new project: Open the project in Xcode. Correct the bundle ID. Select a development team. Exit.
 
-Add the following lane to iOS:
+Add the following lane to iOS: 
 
     desc 'Fetch certificates. Build the iOS application.'
     lane :build do
       certificates
-      increment_build_number(xcodeproj: './ios/YourAppName.xcodeproj')
-      gym(scheme: 'YourAppName', project: './ios/YourAppName.xcodeproj', export_method: 'development')
-    end
+      gym(
+        scheme: "YourAppName",
+        project: './ios/YourAppName.xcodeproj',
+        export_method: 'development'
+      )
+     end
 
 Change the app name to yours.
+
+- Note: A new React Native project would use the previous `gym` command with the `project` parameter as is. A project with external dependencies and a `.xcworkspace` project file would use the [`workspace` parameter instead](https://docs.fastlane.tools/actions/gym/#parameters).
 
 Generated `.ipa` will be at the project root `./YourAppName.ipa`
 
@@ -220,6 +225,6 @@ Other fastlane Guides:
 
 https://docs.fastlane.tools/getting-started/cross-platform/react-native/
 
-Generate your next React Native project with Fastlane already set up.
+A more advanced React Native Fastfile:
 
-https://github.com/osamaq/react-native-template
+https://github.com/osamaq/react-native-template/blob/master/template/fastlane/Fastfile

@@ -1,9 +1,8 @@
 # reactnative-fastlane-appcenter
 
-🚀 Simple fastlane guide for signing, building and uploading new react-native apps to [Visual Studio App Center](https://appcenter.ms).
+🚀 Simple fastlane guide for signing, building and uploading new React Native apps to [Visual Studio App Center](https://appcenter.ms).
 
-
-## Requirements
+## Getting Started
 
 Install fastlane if you do not already have it:
 
@@ -17,8 +16,6 @@ sudo gem install fastlane -NV
 # Alternatively using Homebrew
 brew install fastlane
 ```
-
-## Getting Started
 
 Create a react-native project:
 

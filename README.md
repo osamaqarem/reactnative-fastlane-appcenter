@@ -49,12 +49,14 @@ A Matchfile will be created. Open it and change the profile type (e.g. appstore,
 
 Now, add the following to the Fastfile:
 
-    platform :ios do    
-      desc 'Fetch certificates and provisioning profiles'
-      lane :certificates do
-        match(app_identifier: 'com.app.bundle')
-      end
-    end
+```rb
+platform :ios do    
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do
+    match(app_identifier: 'com.app.bundle')
+  end
+end
+```
 
 Change `com.app.bundle` to the bundle ID you created earlier.
 
@@ -87,16 +89,18 @@ Generated `.ipa` will be at the project root `./YourAppName.ipa`
 
 Add the following to the iOS lane:
 
-    desc 'Fetch certificates, build and upload to App Center.'
-    lane :beta do
-      build
-      appcenter_upload(
-        api_token: ENV["TEST_APPCENTER_API_TOKEN"],
-        owner_name: ENV["TEST_APPCENTER_OWNER_NAME"],
-        app_name: ENV["APPCENTER_APP_NAME"],
-        ipa: ENV["APPCENTER_DISTRIBUTE_IPA"]
-      )
-    end
+```rb
+desc 'Fetch certificates, build and upload to App Center.'
+lane :beta do
+  build
+  appcenter_upload(
+    api_token: ENV["TEST_APPCENTER_API_TOKEN"],
+    owner_name: ENV["TEST_APPCENTER_OWNER_NAME"],
+    app_name: ENV["APPCENTER_APP_NAME"],
+    ipa: ENV["APPCENTER_DISTRIBUTE_IPA"]
+  )
+end
+```
 
 Specify the .ipa path. Following this guide it would be `ipa: "./YourAppName.ipa"`
 
@@ -122,10 +126,12 @@ Move the key to your `android/app` directory.
 
 Create gradle variables by adding the following to `android/gradle.properties`:
 
-    MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
-    MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-    MYAPP_RELEASE_STORE_PASSWORD=*****
-    MYAPP_RELEASE_KEY_PASSWORD=*****
+```gradle
+MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+MYAPP_RELEASE_STORE_PASSWORD=*****
+MYAPP_RELEASE_KEY_PASSWORD=*****
+```
 
 You can change the names.
 
@@ -133,29 +139,30 @@ You can change the names.
 
 Edit `android/app/build.gradle` and add the signing config and build variant:
 
+```gradle
+...
+android {
     ...
-    android {
-        ...
-        defaultConfig { ... }
-        signingConfigs {
-            release {
-                if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                    storeFile file(MYAPP_RELEASE_STORE_FILE)
-                    storePassword MYAPP_RELEASE_STORE_PASSWORD
-                    keyAlias MYAPP_RELEASE_KEY_ALIAS
-                    keyPassword MYAPP_RELEASE_KEY_PASSWORD
-                }
-            }
-        }
-        buildTypes {
-            release {
-                ...
-                signingConfig signingConfigs.release
+    defaultConfig { ... }
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
             }
         }
     }
-    ...
-
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+        }
+    }
+}
+...
+```
 Change the variable names according to the previous step. Done.
 
 ### Building
@@ -178,16 +185,18 @@ Generated `.apk` will be at `android/app/build/outputs/apk/release/app-release.a
 
 Add the following to the Android lane:
 
-    desc 'Build and upload to App Center.'
-    lane :beta do
-    build
-    appcenter_upload(
-        api_token: ENV["TEST_APPCENTER_API_TOKEN"],
-        owner_name: ENV["TEST_APPCENTER_OWNER_NAME"],
-        app_name: ENV["APPCENTER_APP_NAME"],
-        apk: ENV["APPCENTER_DISTRIBUTE_APK"]
-        )
-    end
+```rb
+desc 'Build and upload to App Center.'
+lane :beta do
+build
+appcenter_upload(
+    api_token: ENV["TEST_APPCENTER_API_TOKEN"],
+    owner_name: ENV["TEST_APPCENTER_OWNER_NAME"],
+    app_name: ENV["APPCENTER_APP_NAME"],
+    apk: ENV["APPCENTER_DISTRIBUTE_APK"]
+    )
+end
+```
 
 Specify the .apk path. Following this guide it would be `apk: "./android/app/build/outputs/apk/release/app-release.apk"`
 
@@ -195,11 +204,12 @@ Run `fastlane android beta`. You're now on App Center! 👏
 
 ## `Optional` Add NPM Scripts
 
-    "scripts": {
-      ...,
-      "ios:beta": "fastlane ios beta",
-      "android:beta": "fastlane android beta"
-    }
+```json
+"scripts": {
+  "ios:beta": "fastlane ios beta",
+  "android:beta": "fastlane android beta"
+}
+```
 
 
 ## Environment Variables

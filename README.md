@@ -128,6 +128,8 @@ Create gradle variables by adding the following to `android/gradle.properties`:
 
 You can change the names.
 
+> See [this issue](https://github.com/osamaq/reactnative-fastlane-appcenter/issues/2) for comments about key/credentials security.
+
 Edit `android/app/build.gradle` and add the signing config and build variant:
 
     ...

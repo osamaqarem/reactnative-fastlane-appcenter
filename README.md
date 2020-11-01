@@ -169,13 +169,15 @@ Change the variable names according to the previous step. Done.
 
 Add the following for Android:
 
-    platform :android do
-      desc 'Build the Android application.'
-      lane :build do
-        gradle(task: 'clean', project_dir: 'android/')
-        gradle(task: 'assemble', build_type: 'release', project_dir: 'android/')
-      end
-    end
+```rb
+platform :android do
+  desc 'Build the Android application.'
+  lane :build do
+    gradle(task: 'clean', project_dir: 'android/')
+    gradle(task: 'assemble', build_type: 'release', project_dir: 'android/')
+  end
+end
+```
 
 The build type has to be consistent with the build variant in the previous step.
 

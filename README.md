@@ -226,7 +226,7 @@ https://docs.fastlane.tools/advanced/other/#environment-variables
 
 ## Issues/Suggestions
 
-If you have any suggestions or face any problems following this guide, please bring it up as an issue and I would love to try and help!
+If you have suggestions or there are problems with this doc, please submit an issue!
 
 ## Useful Links
 

@@ -1,3 +1,6 @@
+> [!WARNING]
+> Visual Studio App Center is [scheduled for retirement](https://learn.microsoft.com/en-us/appcenter/retirement) on March 31, 2025.
+
 # reactnative-fastlane-appcenter
 
 🚀 Simple fastlane guide for signing, building and uploading new React Native apps to [Visual Studio App Center](https://appcenter.ms).
